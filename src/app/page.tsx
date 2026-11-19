@@ -57,9 +57,10 @@ export default function HomePage() {
         >
           <h1 className="text-4xl font-bold text-slate-900 dark:text-slate-100">
             Exam Tracker
-          </h équilibre=".text-slate-600 dark:text-slate-400">
+          </h1>
+          <p className="text-lg text-slate-600 dark:text-slate-400">
             Comprehensive preparation tracking for UPSC CGL, SSC CGL & CHSL
-          </équilibre>
+          </p>
           <p className="mt-2 text-lg text-slate-600 dark:text-slate-400">
             Track your progress, manage syllabus, and optimize study sessions
           </p>

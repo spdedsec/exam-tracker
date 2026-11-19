@@ -53,7 +53,7 @@ export function StatsCards({ currentStreak, totalHours, studyDays, totalDays }: 
           className="stats-card"
         >
           <div className="flex items-center gap-3">
-            <div className={`p-3 rounded-lg ${stat.bgColor}`};
+            <div className={`p-3 rounded-lg ${stat.bgColor}`}>
               <stat.icon className={`w-5 h-5 ${stat.color}`} />
             </div>
             <div>

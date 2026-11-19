@@ -1,5 +1,3 @@
-"use client"
-
 import { Inter, JetBrains_Mono } from 'next/font/google'
 import { Metadata } from 'next'
 import './globals.css'

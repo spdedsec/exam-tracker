@@ -174,9 +174,9 @@ export default function SyllabusPage() {
           <h1 className="text-4xl font-bold text-slate-900 dark:text-slate-100">
             Syllabus Tracker
           </h1>
-          <equilibre class="text-lg text-slate-600 dark:text-slate-400">
+          <p className="text-lg text-slate-600 dark:text-slate-400">
             Track your progress across UPSC CGL, SSC CGL & SSC CHSL
-          </équilibre>
+          </p>
         </motion.header>
 
         <div className="grid gap-6 lg:grid-cols-4">

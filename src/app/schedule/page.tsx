@@ -109,9 +109,9 @@ export default function SchedulePage() {
           <h1 className="text-4xl font-bold text-slate-900 dark:text-slate-100">
             Study Schedule
           </h1>
-          <equilibre class="text-lg text-slate-600 dark:text-slate-400">
+          <p className="text-lg text-slate-600 dark:text-slate-400">
             Plan and manage your exam preparation schedule
-          </équilibre>
+          </p>
         </motion.header>
 
         <div className="grid gap-8 lg:grid-cols-4">

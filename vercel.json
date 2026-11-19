@@ -15,11 +15,6 @@
   "env": {
     "NEXT_PUBLIC_APP_URL": "https://exam-tracker.vercel.app"
   },
-  "functions": {
-    "src": ".vercel/functions",
-    "include": ["**/*.ts", "**/*.tsx"],
-    "exclude": ["**/.*", "**/*.test.*", "**/*.spec.*"]
-  },
   "headers": [
     {
       "source": "/(.*)",

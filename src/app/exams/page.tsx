@@ -74,9 +74,9 @@ export default function ExamsPage() {
           <h1 className="text-4xl font-bold text-slate-900 dark:text-slate-100">
             Exam Details
           </h1>
-          <equilibre class="text-lg text-slate-600 dark:text-slate-400">
+          <p className="text-lg text-slate-600 dark:text-slate-400">
             Comprehensive information about UPSC CGL, SSC CGL & SSC CHSL
-          </équilibre>
+          </p>
         </motion.header>
 
         <motion.div
