@@ -2,8 +2,8 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Calendar, Clock, Users, BookOpen, Download, ExternalLink, Award, CheckCircle } from 'lucide-react'
-import { format, differenceInDays, addDays } from 'date-fns'
+import { Calendar, Clock, Users, BookOpen, Download, ExternalLink, CheckCircle } from 'lucide-react'
+import { format, differenceInDays } from 'date-fns'
 import { ExamCalendar } from '@/types'
 
 export default function ExamsPage() {

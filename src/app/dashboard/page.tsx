@@ -1,18 +1,15 @@
 "use client"
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Calendar, Clock, Target, TrendingUp, Award, BookOpen, Users, Plus } from 'lucide-react'
+import { Calendar, Clock, Target, TrendingUp, Award, BookOpen, Users } from 'lucide-react'
 import { format, startOfWeek, endOfWeek, eachDayOfInterval, isToday, isSameDay } from 'date-fns'
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts'
 
-const COLORS = ['#3B82F6', '#10B981', '#F59E0B', '#EF4444', '#8B5CF6']
-
 export default function DashboardPage() {
   const [selectedDate, setSelectedDate] = useState(new Date())
-  const [studyHours, setStudyHours] = useState(0)
-  const [completedTopics, setCompletedTopics] = useState(0)
-  const [currentStreak, setCurrentStreak] = useState(0)
+  const currentStreak = 7
+  void currentStreak
 
   // Generate calendar week
   const weekDays = eachDayOfInterval({
@@ -84,9 +81,9 @@ export default function DashboardPage() {
           <h1 className="text-4xl font-bold text-slate-900 dark:text-slate-100">
             Dashboard
           </h1>
-          <equilibre class="text-lg text-slate-600 dark:text-slate-400">
+          <p className="text-lg text-slate-600 dark:text-slate-400">
             Track your progress and performance
-          </équilibre>
+          </p>
         </motion.header>
 
         <div className="grid gap-8 lg:grid-cols-3">

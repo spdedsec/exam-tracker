@@ -1,7 +1,6 @@
 "use client"
 
 import { StudySession, SyllabusTopic, StudyGoal, ExamCalendar } from '@/types'
-import { format } from 'date-fns'
 
 const STORAGE_KEYS = {
   STUDY_SESSIONS: 'exam_tracker_study_sessions',

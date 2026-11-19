@@ -1,14 +1,14 @@
 "use client"
 
-import { useState, useMemo } from 'react'
-import { motion } from 'framer-motion'
+import { useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 import { Calendar, Clock, Plus, Edit, Trash2, CheckCircle, AlertCircle } from 'lucide-react'
 import { format, addDays, startOfWeek, addWeeks, isToday } from 'date-fns'
-import { ScheduleEntry, ScheduleFormData } from '@/types/schedule'
+import { ScheduleEntry } from '@/types/schedule'
 
 export default function SchedulePage() {
   const [currentDate, setCurrentDate] = useState(new Date())
-  const [selectedExam, setSelectedExam] = useState<string>('all')
+  const [selectedExam, setSelectedExam] = useState<'all' | 'UPSC CGL' | 'SSC CGL' | 'SSC CHSL'>('all')
   const [showAddEntry, setShowAddEntry] = useState(false)
   const [scheduleEntries, setScheduleEntries] = useState<ScheduleEntry[]>([
     {
@@ -216,7 +216,7 @@ export default function SchedulePage() {
                         </label>
                         <select
                           value={selectedExam}
-                          onChange={(e) => setSelectedExam(e.target.value)}
+                          onChange={(e) => setSelectedExam(e.target.value as 'all' | 'UPSC CGL' | 'SSC CGL' | 'SSC CHSL')}
                           className="w-full px-3 py-2 border border-slate-300 dark:border-slate-700 rounded-lg bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100"
                         >
                           <option value="all">All Exams</option>

@@ -1,6 +1,6 @@
 export interface SubjectData {
   id: string
-  title: string
+  title?: string
   chapters: ChapterData[]
 }
 
@@ -12,4 +12,9 @@ export interface ChapterData {
   progress: number
   lastRevised?: Date
   topics: string[]
+}
+
+export interface ExamSubjects {
+  id: string
+  subjects: Record<string, SubjectData>
 }

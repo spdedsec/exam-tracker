@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { Clock, Calendar, Target, Users, TrendingUp, Plus, Minus } from 'lucide-react'
-import { format, differenceInDays, differenceInHours, addDays } from 'date-fns'
+import { Clock, Calendar, Target, Users, TrendingUp, Plus } from 'lucide-react'
+import { format } from 'date-fns'
 import Link from 'next/link'
 import { StatsCards } from '@/components/dashboard/StatsCards'
 import { StudySession } from '@/types'
@@ -25,7 +25,7 @@ export default function HomePage() {
         topics: ['General Studies', 'Quantitative Aptitude'],
         notes: 'Completed GS paper and started QA section',
         revisions: [
-          { id: 'r1', date: new Date('2024-11-16'), hours: 1, topics: ['General Studies'] }
+          { id: 'r1', date: new Date('2024-11-16'), hours: 1, topics: ['General Studies'], type: 'partial' }
         ]
       },
       {

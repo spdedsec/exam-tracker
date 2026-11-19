@@ -2,8 +2,8 @@
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Search, Filter, BookOpen, Clock, CheckCircle, AlertCircle, Plus } from 'lucide-react'
-import { SyllabusTopic, SubjectData } from '@/types/syllabus'
+import { Search, BookOpen, CheckCircle, AlertCircle, Plus } from 'lucide-react'
+import { ExamSubjects } from '@/types/syllabus'
 
 export default function SyllabusPage() {
   const [searchTerm, setSearchTerm] = useState('')
@@ -12,7 +12,7 @@ export default function SyllabusPage() {
   const [filterStatus, setFilterStatus] = useState<string>('all')
   const [showAddTopic, setShowAddTopic] = useState(false)
 
-  const examSubjects: Record<string, SubjectData> = {
+  const examSubjects: Record<string, ExamSubjects> = {
     'UPSC CGL': {
       id: 'upsc-cgl',
       subjects: {
@@ -134,7 +134,7 @@ export default function SyllabusPage() {
   }
 
   const filteredSubjects = Object.entries(examSubjects)
-    .filter(([examId, subjectData]) => {
+    .filter(([examId, _subjectData]) => {
       if (selectedExam !== 'all' && examId !== selectedExam) return false
       return true
     })
@@ -148,7 +148,7 @@ export default function SyllabusPage() {
           }
           if (searchTerm) {
             const searchLower = searchTerm.toLowerCase()
-            return subject.title.toLowerCase().includes(searchLower) ||
+            return (subject.title?.toLowerCase().includes(searchLower) ?? false) ||
                    subject.chapters.some(chapter => chapter.title.toLowerCase().includes(searchLower))
           }
           return true
@@ -334,7 +334,7 @@ export default function SyllabusPage() {
                 </h2>
                 
                 <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                  {Object.values(examData.subjects).map((subject) => (
+                  {Object.values(examData.subjects).map((subject: any) => (
                     <div key={subject.id} className="p-4 rounded-lg border border-slate-200 dark:border-slate-800 hover:shadow-md transition-shadow">
                       <div className="flex items-center justify-between mb-3">
                         <h3 className="font-semibold text-slate-900 dark:text-slate-100">
@@ -344,7 +344,7 @@ export default function SyllabusPage() {
                       </div>
                       
                       <div className="space-y-3">
-                        {subject.chapters.map((chapter) => (
+                        {subject.chapters.map((chapter: any) => (
                           <ChapterCard key={chapter.id} chapter={chapter} />
                         ))}
                       </div>
